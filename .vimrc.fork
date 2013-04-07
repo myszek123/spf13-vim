@@ -1,0 +1,19 @@
+inoremap jj <ESC>
+inoremap <F1> <ESC>
+nnoremap <F1> <ESC>
+vnoremap <F1> <ESC>
+
+noremap <leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+
+nnoremap <leader><space> :noh<cr>
+
+autocmd BufNewFile,BufRead *pentadactylrc*,*.penta set filetype=pentadactyl
+autocmd BufNewFile,BufRead *psql.edit*             set filetype=pgsql
+
+set t_Co=256
+
+" When pressing <leader>cd switch to the directory of the open buffer
+" map <leader>cd :cd %:p:h<cr>
+"
+" autocmd BufEnter *.phtml set syn=php
+

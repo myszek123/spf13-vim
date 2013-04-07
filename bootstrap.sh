@@ -107,19 +107,19 @@ sync_repo() {
 }
 
 create_symlinks() {
-    local source_path="$1"
-    local target_path="$2"
+        local source_path="$1"
+        local target_path="$2"
 
-    lnif "$source_path/.vimrc"         "$target_path/.vimrc"
-    lnif "$source_path/.vimrc.bundles" "$target_path/.vimrc.bundles"
-    lnif "$source_path/.vimrc.before"  "$target_path/.vimrc.before"
-    lnif "$source_path/.vim"           "$target_path/.vim"
+        lnif "$source_path/.vimrc"         "$target_path/.vimrc"
+        lnif "$source_path/.vimrc.bundles" "$target_path/.vimrc.bundles"
+        lnif "$source_path/.vimrc.before"  "$target_path/.vimrc.before"
+        lnif "$source_path/.vim"           "$target_path/.vim"
 
-    touch  "$target_path/.vimrc.local"
+        touch  "$target_path/.vimrc.local"
 
-    ret="$?"
-    success "Setting up vim symlinks."
-    debug
+        ret="$?"
+        success "Setting up vim symlinks."
+        debug
 }
 
 setup_fork_mode() {
@@ -174,6 +174,13 @@ sync_repo       "$APP_PATH" \
 
 create_symlinks "$APP_PATH" \
                 "$HOME"
+if [ ! -e $endpath/.git ]; then
+    echo "cloning spf13-vim"
+    git clone --recursive -b 3.0 git://github.com/myszek123/spf13-vim.git $endpath
+else
+    echo "updating spf13-vim"
+    cd $endpath && git pull
+fi
 
 setup_fork_mode "$fork_maintainer" \
                 "$APP_PATH" \
