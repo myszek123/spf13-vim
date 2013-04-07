@@ -16,4 +16,5 @@ set t_Co=256
 " map <leader>cd :cd %:p:h<cr>
 "
 " autocmd BufEnter *.phtml set syn=php
+ let g:snips_author = 'Jakub Myszka <jakubmyszka@gmail.com>'
 
