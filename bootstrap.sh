@@ -30,7 +30,7 @@ for i in $HOME/.vim $HOME/.vimrc $HOME/.gvimrc; do [ -e $i ] && [ ! -L $i ] && m
 
 if [ ! -e $endpath/.git ]; then
     echo "cloning spf13-vim"
-    git clone --recursive -b 3.0 https://github.com/myszek123/spf13-vim/blob/3.0/bootstrap.sh $endpath
+    git clone --recursive -b 3.0 git@github.com:myszek123/spf13-vim.git $endpath
 else
     echo "updating spf13-vim"
     cd $endpath && git pull
