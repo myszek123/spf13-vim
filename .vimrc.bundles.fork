@@ -1,2 +1,3 @@
 Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'rodjek/vim-puppet'
+Bundle 'exu/pgsql.vim'
