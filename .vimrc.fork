@@ -8,7 +8,7 @@ noremap <leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 nnoremap <leader><space> :noh<cr>
 
 autocmd BufNewFile,BufRead *pentadactylrc*,*.penta set filetype=pentadactyl
-autocmd BufNewFile,BufRead *psql.edit*             set filetype=pgsql
+autocmd BufNewFile,BufRead *psql.edit*,*.sql             set filetype=pgsql
 
 set t_Co=256
 
@@ -17,4 +17,5 @@ set t_Co=256
 "
 " autocmd BufEnter *.phtml set syn=php
  let g:snips_author = 'Jakub Myszka <jakubmyszka@gmail.com>'
+
 
