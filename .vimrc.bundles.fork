@@ -7,4 +7,9 @@ let g:haddock_browser = "open"
 
 Bundle 'jeetsukumaran/vim-buffergator'
 Bundle 'rodjek/vim-puppet'
+
+Bundle 'exu/pgsql.vim'
+Bundle 'nelstrom/vim-visual-star-search'
+
 Bundle 'jgdavey/tslime.vim'
+
