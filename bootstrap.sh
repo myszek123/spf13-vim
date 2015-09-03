@@ -176,11 +176,8 @@ create_symlinks "$APP_PATH" \
                 "$HOME"
 if [ ! -e $endpath/.git ]; then
     echo "cloning spf13-vim"
-<<<<<<< HEAD
-    git clone --recursive -b 3.0 git@github.com:myszek123/spf13-vim.git $endpath
-=======
+    #git clone --recursive -b 3.0 git@github.com:myszek123/spf13-vim.git $endpath
     git clone --recursive -b $branch git@github.com:myszek123/spf13-vim.git $endpath
->>>>>>> 0010fc73b19c9256d3399191566a081020a98466
 else
     echo "updating spf13-vim"
     cd $endpath && git pull

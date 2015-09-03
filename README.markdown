@@ -38,13 +38,6 @@ If you have a bash-compatible shell you can run the script directly:
 ```bash
 
     sh <(curl https://raw.github.com/myszek123/spf13-vim/3.0/bootstrap.sh -L)
-<<<<<<< HEAD
-=======
-```
-
-```
-
->>>>>>> 0010fc73b19c9256d3399191566a081020a98466
 ```
 
 ## Installing on Windows
